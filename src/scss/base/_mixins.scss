@@ -6,7 +6,7 @@
 // @param  $class-prefix  The CSS class prefix
 // @param  $property      The property to generate values for
 // @param  $important     Whether to add '!important' rules or not
-@mixin abstract-generator($map, $class-prefix, $property, $important: false) {
+@mixin sb-generator($map, $class-prefix, $property, $important: false) {
   @each $key, $value in $map {
     // Value has variants
     @if type-of($value) == 'map' {

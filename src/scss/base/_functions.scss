@@ -1,0 +1,31 @@
+// Get a value from a map, or a sub-property, if the value is a map
+// @param  $map      The map variable
+// @param  $key      The map key, or '_all', to get the map, if the value is a map
+// @param  $sub-key  The map key within a value (map)
+// @return The value of the map key
+@function sb-map-get($map, $key, $sub-key: null) {
+  // Return the map, if needed
+  @if $key == '_all' {
+    @return $map;
+  }
+
+  // Throw an error, if the key doesn't exist
+  @if not map-has-key($map, $key) {
+    @error "The key '#{$key}' doesn't exist in the map";
+    @return null;
+  }
+
+  // Get the value belonging to the key
+  $value: map-get($map, $key);
+
+  // See if the value is a map
+  @if type-of($value) == 'map' {
+    // Return the sub-value
+    @return sb-map-get($value, $sub-key);
+  }
+
+  // Otherwise return the color
+  @else {
+    @return $value;
+  }
+}
