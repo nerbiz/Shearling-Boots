@@ -5,16 +5,16 @@
 $__font-family-sans:      ('Open Sans', 'Arial', sans-serif) !default;
 $__font-family-serif:     ('Gentium Book Basic', 'Georgia', serif) !default;
 $__font-family-mono:      ('Courier New', monospace) !default;
+$__font-family-heading:   ('Gentium Book Basic', 'Georgia', serif) !default;
 $__font-families:         () !default;
 $__font-families: map-merge((
-  base:                   $__font-family-sans,
   default:                $__font-family-sans,
   sans:                   $__font-family-sans,
   sans-serif:             $__font-family-sans,
   serif:                  $__font-family-serif,
   mono:                   $__font-family-mono,
   monospace:              $__font-family-mono,
-  heading:                $__font-family-serif
+  heading:                $__font-family-heading,
 ), $__font-families);
 
 // Font sizes
@@ -73,13 +73,11 @@ $__border-widths: map-merge((
 ), $__border-widths);
 
 // Colors
-// When using a map (color variants), the 'base' variant is required
 $__color-brand-primary:   #337ab7 !default;
-$__color-gray-base:       #000 !default;
+$__color-black:           #000 !default;
 $__palette:               () !default;
 $__palette: map-merge((
   theme: (
-    base:                 $__color-brand-primary,
     primary:              $__color-brand-primary,
     secondary:            #333,
     success:              #5cb85c,
@@ -92,14 +90,13 @@ $__palette: map-merge((
     base:                 #42526b
   ),
   'white':                #fff,
-  'black':                #000,
+  'black':                $__color-black,
   'gray': (
-    base:                 $__color-gray-base,
-    light:                lighten($__color-gray-base, 13.5%),
-    lighter:              lighten($__color-gray-base, 20%),
-    medium:               lighten($__color-gray-base, 33.5%),
-    dark:                 lighten($__color-gray-base, 46.7%),
-    darker:               lighten($__color-gray-base, 93.5%)
+    lighter:              lighten($__color-black, 93.5%),
+    light:                lighten($__color-black, 46.7%),
+    medium:               lighten($__color-black, 33.5%),
+    dark:                 lighten($__color-black, 20%),
+    darker:               lighten($__color-black, 13.5%),
   ),
   'green':                #00c95c,
   color1: (
@@ -114,9 +111,9 @@ $__spacingAmount:         10px !default;
 $__spacing:               () !default;
 $__spacing: map-merge((
   0:                      0,
-  1:                      ($__spacingAmount * .2),
-  2:                      ($__spacingAmount * .5),
-  3:                      $__spacingAmount,
-  4:                      ($__spacingAmount * 2),
-  5:                      ($__spacingAmount * 3)
+  1:                      2px,
+  2:                      5px,
+  3:                      10px,
+  4:                      20px,
+  5:                      30px,
 ), $__spacing);
