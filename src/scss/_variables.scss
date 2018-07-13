@@ -130,8 +130,7 @@ $__colors: map-merge((
   gray: color('grey', '_all'),
 ), $__colors);
 
-// Spacing
-// This is used for classes like mb-5 and p-3
+// Spacers
 $__spacer:                10px !default;
 $__spacers:               () !default;
 $__spacers: map-merge((
@@ -142,3 +141,20 @@ $__spacers: map-merge((
   4:                      20px,
   5:                      30px,
 ), $__spacers);
+
+// Z-indexes
+$__z-indexes:             () !default;
+$__z-indexes: map-merge((
+  1neg:                   -1,
+  0:                      0,
+  1:                      1,
+  2:                      2,
+  3:                      3,
+  4:                      4,
+  5:                      5,
+  6:                      6,
+  7:                      7,
+  8:                      8,
+  9:                      9,
+  10:                     10,
+), $__z-indexes);

@@ -8,6 +8,7 @@ $__settings: map-merge((
     'font-family':        true,
     'font-size':          true,
     'font-weight':        true,
-    'line-height':        true
+    'line-height':        true,
+    'z-index':            true,
   )
 ), $__settings);
