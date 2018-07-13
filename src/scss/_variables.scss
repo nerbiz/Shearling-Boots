@@ -91,8 +91,8 @@ $__border-widths: map-merge((
 ), $__border-widths);
 
 // Colors
-$__color-brand-primary:   #337ab7 !default;
-$__color-brand-secondary: #333 !default;
+$__color-brand-primary:   #007bff !default;
+$__color-brand-secondary: #6c757d !default;
 $__color-black:           #000 !default;
 $__color-white:           #fff !default;
 $__colors:                () !default;
@@ -112,18 +112,18 @@ $__colors: map-merge((
   'white':                $__color-white,
   'black':                $__color-black,
   'grey': (
-    'lighter':            lighten($__color-black, 93.5%),
-    'light':              lighten($__color-black, 46.7%),
-    'medium':             lighten($__color-black, 33.5%),
-    'dark':               lighten($__color-black, 20%),
-    'darker':             lighten($__color-black, 13.5%),
+    'lighter':            lighten($__color-black, (100% / 6 * 5)),
+    'light':              lighten($__color-black, (100% / 6 * 4)),
+    'medium':             lighten($__color-black, (100% / 6 * 3)),
+    'dark':               lighten($__color-black, (100% / 6 * 2)),
+    'darker':             lighten($__color-black, (100% / 6 * 1)),
   ),
   'green':                #00c95c,
 ), $__colors);
 
 // English (US) naming, used in Bootstrap
 $__colors: map-merge((
-  'gray': color('grey', '_all'),
+  'gray': sb-color('grey', '_all'),
 ), $__colors);
 
 // Z-indexes
