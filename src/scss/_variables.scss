@@ -112,11 +112,11 @@ $__colors: map-merge((
   'white':                $__color-white,
   'black':                $__color-black,
   'grey': (
-    'lighter':            lighten($__color-black, 93.5%),
-    'light':              lighten($__color-black, 46.7%),
-    'medium':             lighten($__color-black, 33.5%),
-    'dark':               lighten($__color-black, 20%),
-    'darker':             lighten($__color-black, 13.5%),
+    'lighter':            lighten($__color-black, (100% / 6 * 5)),
+    'light':              lighten($__color-black, (100% / 6 * 4)),
+    'medium':             lighten($__color-black, (100% / 6 * 3)),
+    'dark':               lighten($__color-black, (100% / 6 * 2)),
+    'darker':             lighten($__color-black, (100% / 6 * 1)),
   ),
   'green':                #00c95c,
 ), $__colors);
