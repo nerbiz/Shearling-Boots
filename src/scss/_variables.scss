@@ -95,8 +95,8 @@ $__color-brand-primary:   #337ab7 !default;
 $__color-brand-secondary: #333 !default;
 $__color-black:           #000 !default;
 $__color-white:           #fff !default;
-$__palette:               () !default;
-$__palette: map-merge((
+$__colors:               () !default;
+$__colors: map-merge((
   theme: (
     primary:              $__color-brand-primary,
     secondary:            $__color-brand-secondary,
@@ -123,22 +123,22 @@ $__palette: map-merge((
     base:                 #eaeff3,
     dark:                 #d3dce6,
   )
-), $__palette);
+), $__colors);
 
 // English (US) naming, used in Bootstrap
-$__palette: map-merge((
-  gray: palette('grey', '_all'),
-), $__palette);
+$__colors: map-merge((
+  gray: color('grey', '_all'),
+), $__colors);
 
 // Spacing
 // This is used for classes like mb-5 and p-3
-$__spacingAmount:         10px !default;
-$__spacing:               () !default;
-$__spacing: map-merge((
+$__spacer:                10px !default;
+$__spacers:               () !default;
+$__spacers: map-merge((
   0:                      0,
   1:                      2px,
   2:                      5px,
   3:                      10px,
   4:                      20px,
   5:                      30px,
-), $__spacing);
+), $__spacers);

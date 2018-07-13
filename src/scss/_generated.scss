@@ -1,5 +1,5 @@
-@include sb-generator($__palette, 'color', 'color', setting('important', 'color'));
-@include sb-generator($__palette, 'bg-color', 'background-color', setting('important', 'background-color'));
+@include sb-generator($__colors, 'color', 'color', setting('important', 'color'));
+@include sb-generator($__colors, 'bg-color', 'background-color', setting('important', 'background-color'));
 
 @include sb-generator($__font-families, 'font-family', 'font-family', setting('important', 'font-family'));
 
