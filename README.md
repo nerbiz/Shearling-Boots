@@ -18,3 +18,15 @@ The below shows the including the .scss files. The tilde is a Webpack feature, b
 
 // ...the rest of your scss
 ```
+
+#### Functions without prefix
+
+The functions in this package have a deliberate prefix, to prevent conflicts. If for some reason you prefer `font-size()` over `sb-font-size()` for instance, you can include the no-prefix file.
+
+To make sure the functions are not being replaced, include this after all vendor includes.
+
+```scss
+@import '~shearling-boots/src/scss/functions-no-prefix';
+```
+
+Please note that the internal function `sb-map-get()` and mixin `sb-generator()` are left untouched.
