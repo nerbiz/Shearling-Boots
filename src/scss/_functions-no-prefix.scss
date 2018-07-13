@@ -34,10 +34,6 @@
   @return sb-border-width($width);
 }
 
-@function spacer($name) {
-  @return sb-spacer($name);
-}
-
 @function color($name, $variant: 'base') {
   @return sb-color($name, $variant);
 }

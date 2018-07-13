@@ -129,22 +129,6 @@ $__colors: map-merge((
   gray: color('grey', '_all'),
 ), $__colors);
 
-// Spacers
-$__spacer:                10px !default;
-$__spacers:               () !default;
-$__spacers: map-merge((
-  0:                      0,
-  1:                      2px,
-  2:                      5px,
-  3:                      10px,
-  4:                      20px,
-  5:                      30px,
-  // Gutter width
-  g:                      $__grid-gutter-width,
-  // Half the gutter width
-  hg:                     ($__grid-gutter-width / 2),
-), $__spacers);
-
 // Z-indexes
 $__z-indexes:             () !default;
 $__z-indexes: map-merge((

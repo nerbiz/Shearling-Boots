@@ -68,10 +68,6 @@
   @return sb-map-get($__border-widths, $width);
 }
 
-@function sb-spacer($name) {
-  @return sb-map-get($__spacers, $name);
-}
-
 @function sb-color($name, $variant: 'base') {
   @return sb-map-get($__colors, $name, $variant);
 }
