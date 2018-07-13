@@ -1,5 +1,9 @@
 # Release notes
 
+## 0.3.1
+
+* Added more explanation to the readme.
+
 ## 0.3.0
 
 * Fixed: was using setting() instead of sb-setting().
