@@ -2,12 +2,12 @@
   @return sb-setting($category, $setting);
 }
 
-@function breakpoint($name) {
-  @return sb-breakpoint($name);
+@function breakpoint($breakpoint) {
+  @return sb-breakpoint($breakpoint);
 }
 
-@function container-width($name) {
-  @return sb-container-width($name);
+@function container-width($breakpoint) {
+  @return sb-container-width($breakpoint);
 }
 
 @function font-family($name) {
@@ -32,10 +32,6 @@
 
 @function border-width($width) {
   @return sb-border-width($width);
-}
-
-@function spacer($name) {
-  @return sb-spacer($name);
 }
 
 @function color($name, $variant: 'base') {

@@ -78,7 +78,20 @@ The values in `_settings.scss` decide if an `!important` rule is added, so the a
 
 #### Making variable access easier
 
-Instead of having 10 color variables, they are now placed in a map, and accessible with color('name'), with the same value as in the generated CSS class. So define it once, use it consistently in different places. This also goes for the font families, font sizes etc.
+Instead of having 10 color variables, they are now placed in a map, and accessible with `color('name')`, with the same value as in the generated CSS class. So define it once, use it consistently in different places. Here is the list of functions:
+
+* `sb-setting($category, $setting)`
+* `sb-breakpoint($breakpoint)`
+* `sb-container-width($breakpoint)`
+* `sb-font-family($name)`
+* `sb-font-size($size)`
+* `sb-font-weight($weight)`
+* `sb-line-height($height)`
+* `sb-border-radius($size)`
+* `sb-border-width($width)`
+* `sb-color($name, $variant: 'base')`
+
+Of course, if you have included `_functions-no-prefix.scss`, the same functions, but without the 'sb-' prefix are also added.
 
 #### Adding some generally useful CSS
 

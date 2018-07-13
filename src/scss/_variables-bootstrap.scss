@@ -1,6 +1,3 @@
-// Grid system
-$grid-gutter-width:           $__grid-gutter-width;
-
 // Breakpoints and containers
 $grid-breakpoints:            sb-breakpoint('_all');
 $container-max-widths:        sb-container-width('_all');
@@ -25,7 +22,3 @@ $theme-colors:                sb-color('theme', '_all');
 $border-radius:               sb-border-radius('medium');
 $border-radius-lg:            sb-border-radius('large');
 $border-radius-sm:            sb-border-radius('small');
-
-// Spacing
-$spacer:                      $__spacer;
-$spacers:                     sb-spacer('_all');
