@@ -1,6 +1,9 @@
 // Variables starting with double underscores are used for reference,
 // and shouldn't (but could) be used in styling
 
+// Grid system
+$__grid-gutter-width:     30px !default;
+
 // Breakpoints and containers
 $__grid-breakpoints: () !default;
 $__grid-breakpoints: map-merge((
@@ -140,6 +143,10 @@ $__spacers: map-merge((
   3:                      10px,
   4:                      20px,
   5:                      30px,
+  // Gutter width
+  g:                      $__grid-gutter-width,
+  // Half the gutter width
+  hg:                     ($__grid-gutter-width / 2),
 ), $__spacers);
 
 // Z-indexes
