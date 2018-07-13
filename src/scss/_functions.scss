@@ -36,12 +36,12 @@
   @return sb-map-get($__settings, $category, $setting);
 }
 
-@function sb-breakpoint($name) {
-  @return sb-map-get($__grid-breakpoints, $name);
+@function sb-breakpoint($breakpoint) {
+  @return sb-map-get($__grid-breakpoints, $breakpoint);
 }
 
-@function sb-container-width($name) {
-  @return sb-map-get($__container-max-widths, $name);
+@function sb-container-width($breakpoint) {
+  @return sb-map-get($__container-max-widths, $breakpoint);
 }
 
 @function sb-font-family($name) {
