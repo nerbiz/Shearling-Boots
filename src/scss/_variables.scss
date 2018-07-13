@@ -4,90 +4,90 @@
 // Breakpoints and containers
 $__grid-breakpoints: () !default;
 $__grid-breakpoints: map-merge((
-  xs:                     0,
-  sm:                     576px,
-  md:                     768px,
-  lg:                     992px,
-  xl:                     1200px,
+  'xs':                   0,
+  'sm':                   576px,
+  'md':                   768px,
+  'lg':                   992px,
+  'xl':                   1200px,
 ), $__grid-breakpoints);
 
 $__container-max-widths: () !default;
 $__container-max-widths: map-merge((
-  sm:                     540px,
-  md:                     720px,
-  lg:                     960px,
-  xl:                     1140px
+  'sm':                   540px,
+  'md':                   720px,
+  'lg':                   960px,
+  'xl':                   1140px,
 ), $__container-max-widths);
 
 // Font families
-$__font-family-sans:      ('Open Sans', 'Arial', sans-serif) !default;
-$__font-family-serif:     ('Open Sans', 'Arial', sans-serif) !default;
+$__font-family-sans:      ('Arial', sans-serif) !default;
+$__font-family-serif:     ('Georgia', serif) !default;
 $__font-family-mono:      ('Courier New', monospace) !default;
-$__font-family-heading:   ('Open Sans', 'Arial', sans-serif) !default;
+$__font-family-heading:   ('Arial', sans-serif) !default;
 $__font-families:         () !default;
 $__font-families: map-merge((
-  default:                $__font-family-sans,
-  sans:                   $__font-family-sans,
-  sans-serif:             $__font-family-sans,
-  serif:                  $__font-family-serif,
-  mono:                   $__font-family-mono,
-  monospace:              $__font-family-mono,
-  heading:                $__font-family-heading,
+  'default':              $__font-family-sans,
+  'sans':                 $__font-family-sans,
+  'sans-serif':           $__font-family-sans,
+  'serif':                $__font-family-serif,
+  'mono':                 $__font-family-mono,
+  'monospace':            $__font-family-mono,
+  'heading':              $__font-family-heading,
 ), $__font-families);
 
 // Font sizes
 $__font-size-default:     16px !default;
 $__font-sizes:            () !default;
 $__font-sizes: map-merge((
-  tiny:                   $__font-size-default - 4,
-  small:                  $__font-size-default - 2,
-  default:                $__font-size-default,
-  medium:                 $__font-size-default + 4,
-  large:                  $__font-size-default + 8,
-  huge:                   $__font-size-default + 20,
-  h1:                     $__font-size-default + 10,
-  h2:                     $__font-size-default + 8,
-  h3:                     $__font-size-default + 6,
-  h4:                     $__font-size-default + 4,
-  h5:                     $__font-size-default + 2,
-  h6:                     $__font-size-default,
+  'tiny':                 $__font-size-default - 4,
+  'small':                $__font-size-default - 2,
+  'default':              $__font-size-default,
+  'medium':               $__font-size-default + 4,
+  'large':                $__font-size-default + 8,
+  'huge':                 $__font-size-default + 20,
+  'h1':                   $__font-size-default + 10,
+  'h2':                   $__font-size-default + 8,
+  'h3':                   $__font-size-default + 6,
+  'h4':                   $__font-size-default + 4,
+  'h5':                   $__font-size-default + 2,
+  'h6':                   $__font-size-default,
 ), $__font-sizes);
 
 // Font weights
 $__font-weights:          () !default;
 $__font-weights: map-merge((
-  light:                  300,
-  normal:                 400,
-  semibold:               600,
-  bold:                   700,
-  extrabold:              800,
+  'light':                300,
+  'normal':               400,
+  'semibold':             600,
+  'bold':                 700,
+  'extrabold':            800,
 ), $__font-weights);
 
 // Line heights
 $__line-heights:          () !default;
 $__line-heights: map-merge((
-  default:                1.5,
-  fontsize:               1,
-  heading:                1.2,
+  'default':              1.5,
+  'fontsize':             1,
+  'heading':              1.2,
 ), $__line-heights);
 
 // Borders
 $__border-radius:         () !default;
 $__border-radius: map-merge((
-  tiny:                   2px,
-  small:                  3px,
-  medium:                 5px,
-  large:                  7px,
-  huge:                   10px,
+  'tiny':                 2px,
+  'small':                3px,
+  'medium':               5px,
+  'large':                7px,
+  'huge':                 10px,
 ), $__border-radius);
 
 $__border-widths:         () !default;
 $__border-widths: map-merge((
-  tiny:                   1px,
-  small:                  2px,
-  medium:                 3px,
-  large:                  4px,
-  huge:                   5px,
+  'tiny':                 1px,
+  'small':                2px,
+  'medium':               3px,
+  'large':                4px,
+  'huge':                 5px,
 ), $__border-widths);
 
 // Colors
@@ -95,50 +95,50 @@ $__color-brand-primary:   #337ab7 !default;
 $__color-brand-secondary: #333 !default;
 $__color-black:           #000 !default;
 $__color-white:           #fff !default;
-$__colors:               () !default;
+$__colors:                () !default;
 $__colors: map-merge((
-  theme: (
-    primary:              $__color-brand-primary,
-    secondary:            $__color-brand-secondary,
-    success:              #5cb85c,
-    info:                 #5bc0de,
-    warning:              #f0ad4e,
-    danger:               #d9534f
+  'theme': (
+    'primary':            $__color-brand-primary,
+    'secondary':          $__color-brand-secondary,
+    'success':            #5cb85c,
+    'info':               #5bc0de,
+    'warning':            #f0ad4e,
+    'danger':             #d9534f,
   ),
-  background:             $__color-white,
-  font: (
-    base:                 #42526b,
+  'background':           $__color-white,
+  'font': (
+    'base':               #42526b,
   ),
   'white':                $__color-white,
   'black':                $__color-black,
   'grey': (
-    lighter:              lighten($__color-black, 93.5%),
-    light:                lighten($__color-black, 46.7%),
-    medium:               lighten($__color-black, 33.5%),
-    dark:                 lighten($__color-black, 20%),
-    darker:               lighten($__color-black, 13.5%),
+    'lighter':            lighten($__color-black, 93.5%),
+    'light':              lighten($__color-black, 46.7%),
+    'medium':             lighten($__color-black, 33.5%),
+    'dark':               lighten($__color-black, 20%),
+    'darker':             lighten($__color-black, 13.5%),
   ),
   'green':                #00c95c,
 ), $__colors);
 
 // English (US) naming, used in Bootstrap
 $__colors: map-merge((
-  gray: color('grey', '_all'),
+  'gray': color('grey', '_all'),
 ), $__colors);
 
 // Z-indexes
 $__z-indexes:             () !default;
 $__z-indexes: map-merge((
-  1neg:                   -1,
-  0:                      0,
-  1:                      1,
-  2:                      2,
-  3:                      3,
-  4:                      4,
-  5:                      5,
-  6:                      6,
-  7:                      7,
-  8:                      8,
-  9:                      9,
-  10:                     10,
+  '1neg':                 -1,
+  '0':                    0,
+  '1':                    1,
+  '2':                    2,
+  '3':                    3,
+  '4':                    4,
+  '5':                    5,
+  '6':                    6,
+  '7':                    7,
+  '8':                    8,
+  '9':                    9,
+  '10':                   10,
 ), $__z-indexes);
