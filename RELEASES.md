@@ -1,5 +1,11 @@
 # Release notes
 
+## 0.4.0
+
+* Removed spacers from the variables, because there's no added benefit over just using the Bootstrap variable.
+* Default font-families are now web-safe fonts.
+* Added the list of functions to the readme.
+
 ## 0.3.1
 
 * Added more explanation to the readme.
