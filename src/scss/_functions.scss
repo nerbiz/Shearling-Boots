@@ -2,27 +2,35 @@
   @return sb-map-get($__settings, $category, $setting);
 }
 
-@function fontfamily($name) {
+@function breakpoint($name) {
+  @return sb-map-get($__grid-breakpoints, $name);
+}
+
+@function container-width($name) {
+  @return sb-map-get($__container-max-widths, $name);
+}
+
+@function font-family($name) {
   @return sb-map-get($__font-families, $name);
 }
 
-@function fontsize($size) {
+@function font-size($size) {
   @return sb-map-get($__font-sizes, $size);
 }
 
-@function fontweight($weight) {
+@function font-weight($weight) {
   @return sb-map-get($__font-weights, $weight);
 }
 
-@function lineheight($height) {
+@function line-height($height) {
   @return sb-map-get($__line-heights, $height);
 }
 
-@function borderradius($size) {
+@function border-radius($size) {
   @return sb-map-get($__border-radius, $size);
 }
 
-@function borderwidth($width) {
+@function border-width($width) {
   @return sb-map-get($__border-widths, $width);
 }
 

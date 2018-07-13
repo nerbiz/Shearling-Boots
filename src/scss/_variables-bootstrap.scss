@@ -1,23 +1,27 @@
+// Breakpoints and containers
+$grid-breakpoints:            breakpoint('_all');
+$container-max-widths:        container-width('_all');
+
 // Fonts
-$font-family-base:            fontfamily('default');
-$font-family-sans-serif:      fontfamily('sans');
-$font-family-monospace:       fontfamily('mono');
+$font-family-base:            font-family('default');
+$font-family-sans-serif:      font-family('sans');
+$font-family-monospace:       font-family('mono');
 
-$font-weight-base:            fontweight('normal');
-$font-weight-light:           fontweight('light');
-$font-weight-normal:          fontweight('normal');
-$font-weight-bold:            fontweight('bold');
+$font-weight-base:            font-weight('normal');
+$font-weight-light:           font-weight('light');
+$font-weight-normal:          font-weight('normal');
+$font-weight-bold:            font-weight('bold');
 
-$line-height-base:            lineheight('default');
+$line-height-base:            line-height('default');
 
 // Colors
 $colors:                      $__palette;
 $theme-colors:                palette('theme', '_all');
 
 // Borders
-$border-radius:               borderradius('medium');
-$border-radius-lg:            borderradius('large');
-$border-radius-sm:            borderradius('small');
+$border-radius:               border-radius('medium');
+$border-radius-lg:            border-radius('large');
+$border-radius-sm:            border-radius('small');
 
 // Spacing
 $spacer:                      $__spacingAmount;

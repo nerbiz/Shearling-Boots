@@ -1,11 +1,29 @@
 // Variables starting with double underscores are used for reference,
 // and shouldn't (but could) be used in styling
 
+// Breakpoints and containers
+$__grid-breakpoints: () !default;
+$__grid-breakpoints: map-merge((
+  xs:                     0,
+  sm:                     576px,
+  md:                     768px,
+  lg:                     992px,
+  xl:                     1200px,
+), $__grid-breakpoints);
+
+$__container-max-widths: () !default;
+$__container-max-widths: map-merge((
+  sm:                     540px,
+  md:                     720px,
+  lg:                     960px,
+  xl:                     1140px
+), $__container-max-widths);
+
 // Font families
 $__font-family-sans:      ('Open Sans', 'Arial', sans-serif) !default;
-$__font-family-serif:     ('Gentium Book Basic', 'Georgia', serif) !default;
+$__font-family-serif:     ('Open Sans', 'Arial', sans-serif) !default;
 $__font-family-mono:      ('Courier New', monospace) !default;
-$__font-family-heading:   ('Gentium Book Basic', 'Georgia', serif) !default;
+$__font-family-heading:   ('Open Sans', 'Arial', sans-serif) !default;
 $__font-families:         () !default;
 $__font-families: map-merge((
   default:                $__font-family-sans,
@@ -32,7 +50,7 @@ $__font-sizes: map-merge((
   h3:                     $__font-size-default + 6,
   h4:                     $__font-size-default + 4,
   h5:                     $__font-size-default + 2,
-  h6:                     $__font-size-default
+  h6:                     $__font-size-default,
 ), $__font-sizes);
 
 // Font weights
@@ -42,7 +60,7 @@ $__font-weights: map-merge((
   normal:                 400,
   semibold:               600,
   bold:                   700,
-  extrabold:              800
+  extrabold:              800,
 ), $__font-weights);
 
 // Line heights
@@ -50,7 +68,7 @@ $__line-heights:          () !default;
 $__line-heights: map-merge((
   default:                1.5,
   fontsize:               1,
-  heading:                1
+  heading:                1.2,
 ), $__line-heights);
 
 // Borders
@@ -59,8 +77,8 @@ $__border-radius: map-merge((
   tiny:                   2px,
   small:                  3px,
   medium:                 5px,
-  large:                  8px,
-  huge:                   10px
+  large:                  7px,
+  huge:                   10px,
 ), $__border-radius);
 
 $__border-widths:         () !default;
@@ -69,29 +87,31 @@ $__border-widths: map-merge((
   small:                  2px,
   medium:                 3px,
   large:                  4px,
-  huge:                   5px
+  huge:                   5px,
 ), $__border-widths);
 
 // Colors
 $__color-brand-primary:   #337ab7 !default;
+$__color-brand-secondary: #333 !default;
 $__color-black:           #000 !default;
+$__color-white:           #fff !default;
 $__palette:               () !default;
 $__palette: map-merge((
   theme: (
     primary:              $__color-brand-primary,
-    secondary:            #333,
+    secondary:            $__color-brand-secondary,
     success:              #5cb85c,
     info:                 #5bc0de,
     warning:              #f0ad4e,
     danger:               #d9534f
   ),
-  background:             #ebebeb,
+  background:             $__color-white,
   font: (
-    base:                 #42526b
+    base:                 #42526b,
   ),
-  'white':                #fff,
+  'white':                $__color-white,
   'black':                $__color-black,
-  'gray': (
+  'grey': (
     lighter:              lighten($__color-black, 93.5%),
     light:                lighten($__color-black, 46.7%),
     medium:               lighten($__color-black, 33.5%),
@@ -101,8 +121,13 @@ $__palette: map-merge((
   'green':                #00c95c,
   color1: (
     base:                 #eaeff3,
-    dark:                 #d3dce6
+    dark:                 #d3dce6,
   )
+), $__palette);
+
+// English (US) naming, used in Bootstrap
+$__palette: map-merge((
+  gray: palette('grey', '_all'),
 ), $__palette);
 
 // Spacing
