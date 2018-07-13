@@ -123,7 +123,7 @@ $__colors: map-merge((
 
 // English (US) naming, used in Bootstrap
 $__colors: map-merge((
-  'gray': color('grey', '_all'),
+  'gray': sb-color('grey', '_all'),
 ), $__colors);
 
 // Z-indexes
