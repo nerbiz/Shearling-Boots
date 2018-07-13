@@ -1,5 +1,11 @@
 # Release notes
 
+## 0.4.1
+
+* Fixed: 'gray' values weren't set, because of non-existing function usage.
+* Grayscales are now evenly divided into 5 steps.
+* Changed the default primary and secondary colors, using Bootstrap defaults.
+
 ## 0.4.0
 
 * Removed spacers from the variables, because there's no added benefit over just using the Bootstrap variable.
