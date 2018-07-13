@@ -122,10 +122,6 @@ $__colors: map-merge((
     darker:               lighten($__color-black, 13.5%),
   ),
   'green':                #00c95c,
-  color1: (
-    base:                 #eaeff3,
-    dark:                 #d3dce6,
-  )
 ), $__colors);
 
 // English (US) naming, used in Bootstrap
