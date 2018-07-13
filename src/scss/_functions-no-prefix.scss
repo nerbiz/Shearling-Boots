@@ -39,5 +39,5 @@
 }
 
 @function color($name, $variant: 'base') {
-  @return sb-color($name, $variant: 'base');
+  @return sb-color($name, $variant);
 }
