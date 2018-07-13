@@ -1,43 +1,77 @@
-@function setting($category, $setting) {
-  @return abstract-map-getter(
-    $__settings,
-    $category, "The settings category '#{$category}' doesn't exist",
-    $setting, "The settings category '#{$category}' doesn't have the setting '#{$setting}'"
-  );
+// Get a value from a map, or a sub-property, if the value is a map
+// @param  $map      The map variable
+// @param  $key      The map key, or '_all', to get the map, if the value is a map
+// @param  $sub-key  The map key within a value (map)
+// @return The value of the map key
+@function sb-map-get($map, $key, $sub-key: null) {
+  // Return the map, if needed
+  @if $key == '_all' {
+    @return $map;
+  }
+
+  // Throw an error, if the key doesn't exist
+  @if not map-has-key($map, $key) {
+    @error "The key '#{$key}' doesn't exist in the map";
+    @return null;
+  }
+
+  // Get the value belonging to the key
+  $value: map-get($map, $key);
+
+  // See if the value is a map
+  @if type-of($value) == 'map' {
+    // Return the sub-value
+    @return sb-map-get($value, $sub-key);
+  }
+
+  // Otherwise return the color
+  @else {
+    @return $value;
+  }
 }
 
-@function fontfamily($name) {
-  @return abstract-map-getter($__font-families, $name, "The font-family name '#{$name}' doesn't exist");
+
+
+@function sb-setting($category, $setting) {
+  @return sb-map-get($__settings, $category, $setting);
 }
 
-@function fontsize($size) {
-  @return abstract-map-getter($__font-sizes, $size, "The font size '#{$size}' doesn't exist");
+@function sb-breakpoint($name) {
+  @return sb-map-get($__grid-breakpoints, $name);
 }
 
-@function fontweight($weight) {
-  @return abstract-map-getter($__font-weights, $weight, "The font weight '#{$weight}' doesn't exist");
+@function sb-container-width($name) {
+  @return sb-map-get($__container-max-widths, $name);
 }
 
-@function lineheight($height) {
-  @return abstract-map-getter($__line-heights, $height, "The line height '#{$height}' doesn't exist");
+@function sb-font-family($name) {
+  @return sb-map-get($__font-families, $name);
 }
 
-@function borderradius($size) {
-  @return abstract-map-getter($__border-radius, $size, "The border radius size '#{$size}' doesn't exist");
+@function sb-font-size($size) {
+  @return sb-map-get($__font-sizes, $size);
 }
 
-@function borderwidth($width) {
-  @return abstract-map-getter($__border-widths, $width, "The border width '#{$width}' doesn't exist");
+@function sb-font-weight($weight) {
+  @return sb-map-get($__font-weights, $weight);
 }
 
-@function spacing($name) {
-  @return abstract-map-getter($__spacing, $name, "The spacing name '#{$name}' doesn't exist");
+@function sb-line-height($height) {
+  @return sb-map-get($__line-heights, $height);
 }
 
-@function palette($name, $variant: 'base') {
-  @return abstract-map-getter(
-    $__palette,
-    $name, "The color '#{$name}' doesn't exist",
-    $variant, "The color '#{$name}' doesn't have the variant '#{$variant}'"
-  );
+@function sb-border-radius($size) {
+  @return sb-map-get($__border-radius, $size);
+}
+
+@function sb-border-width($width) {
+  @return sb-map-get($__border-widths, $width);
+}
+
+@function sb-spacer($name) {
+  @return sb-map-get($__spacers, $name);
+}
+
+@function sb-color($name, $variant: 'base') {
+  @return sb-map-get($__colors, $name, $variant);
 }

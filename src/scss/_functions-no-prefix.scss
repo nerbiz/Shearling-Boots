@@ -1,0 +1,43 @@
+@function setting($category, $setting) {
+  @return sb-setting($category, $setting);
+}
+
+@function breakpoint($name) {
+  @return sb-breakpoint($name);
+}
+
+@function container-width($name) {
+  @return sb-container-width($name);
+}
+
+@function font-family($name) {
+  @return sb-font-family($name);
+}
+
+@function font-size($size) {
+  @return sb-font-size($size);
+}
+
+@function font-weight($weight) {
+  @return sb-font-weight($weight);
+}
+
+@function line-height($height) {
+  @return sb-line-height($height);
+}
+
+@function border-radius($size) {
+  @return sb-border-radius($size);
+}
+
+@function border-width($width) {
+  @return sb-border-width($width);
+}
+
+@function spacer($name) {
+  @return sb-spacer($name);
+}
+
+@function color($name, $variant: 'base') {
+  @return sb-color($name, $variant: 'base');
+}
