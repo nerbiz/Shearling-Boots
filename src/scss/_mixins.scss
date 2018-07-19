@@ -2,11 +2,22 @@
 // Example, where the prefix is 'font-weight' and value is 'semibold': .font-weight-semibold
 // Example, where the prefix is 'color', the value is 'red' and variant is 'dark': .color-red--dark
 // 
-// @param  $map           The map to generate from
+// @param  $map           The map or list to generate from (list will become value:value pairs)
 // @param  $class-prefix  The CSS class prefix
 // @param  $property      The property to generate values for
 // @param  $important     Whether to add '!important' rules or not
 @mixin sb-generator($map, $class-prefix, $property, $important: false) {
+  // Change a list into a map (key = value)
+  @if type-of($map) == 'list' {
+    $map-temp: ();
+    @each $value in $map {
+      $map-temp: map-merge($map-temp, (
+        $value: $value,
+      ));
+    }
+    $map: $map-temp;
+  }
+
   @each $key, $value in $map {
     // Value has variants
     @if type-of($value) == 'map' {

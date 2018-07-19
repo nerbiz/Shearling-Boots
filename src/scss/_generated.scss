@@ -16,3 +16,5 @@
 @include sb-generator($__border-widths, 'bwr', 'border-right-width', sb-setting('important', 'border-width'));
 
 @include sb-generator($__z-indexes, 'z-index', 'z-index', sb-setting('important', 'z-index'));
+
+@include sb-generator($__cursors, 'cursor', 'cursor', sb-setting('important', 'cursor'));
