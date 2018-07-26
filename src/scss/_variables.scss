@@ -130,21 +130,12 @@ $__colors: map-merge((
 ), $__colors);
 
 // Z-indexes
-$__z-indexes:             () !default;
-$__z-indexes: map-merge((
-  '1neg':                 -1,
-  '0':                    0,
-  '1':                    1,
-  '2':                    2,
-  '3':                    3,
-  '4':                    4,
-  '5':                    5,
-  '6':                    6,
-  '7':                    7,
-  '8':                    8,
-  '9':                    9,
-  '10':                   10,
-), $__z-indexes);
+$__z-index-from:          0 !default;
+$__z-index-to:            10 !default;
+$__z-indexes:             ();
+@for $i from $__z-index-from through $__z-index-to {
+  $__z-indexes: append($__z-indexes, $i);
+}
 
 // Cursors
 $__cursors: (alias, all-scroll, auto, cell, context-menu, col-resize, copy, crosshair, default,
