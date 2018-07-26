@@ -6,15 +6,15 @@ This project aims to enhance the usage of [Bootstrap 4](https://github.com/twbs/
 
 ### Usage
 
-The below shows the including the .scss files. The tilde is a Webpack feature, but just point it to the node_modules directory.
+Include the files as follows:
 
 ```scss
-@import '~shearling-boots/src/scss/before-bootstrap';
+@import 'node_modules/shearling-boots/src/scss/before-bootstrap';
 
 // Include Bootstrap 4
-@import '~bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap/scss/bootstrap';
 
-@import '~shearling-boots/src/scss/after-bootstrap';
+@import 'node_modules/shearling-boots/src/scss/after-bootstrap';
 
 // ...the rest of your scss
 ```
@@ -106,3 +106,9 @@ Of course, if you have included `_functions-no-prefix.scss`, the same functions,
 #### Adding some generally useful CSS
 
 Currently only a small accessibility stylesheet is added, but my intention is to expand this.
+
+### License
+
+This project is released under the [The Unlicense]('http://unlicense.org/'), which means it's placed in the public domain.
+
+If you fork or distribute this project, or do anything else where giving credit seems appropriate, I would appreciate it if you'd credit me, but it's not required.
