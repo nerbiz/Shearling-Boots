@@ -105,6 +105,10 @@ $__colors: map-merge((
     'warning':            #f0ad4e,
     'danger':             #d9534f,
   ),
+  'brand': (
+    'primary':            $__color-brand-primary,
+    'secondary':          $__color-brand-secondary,
+  ),
   'background':           $__color-white,
   'font': (
     'base':               #42526b,
@@ -118,7 +122,6 @@ $__colors: map-merge((
     'dark':               lighten($__color-black, (100% / 6 * 2)),
     'darker':             lighten($__color-black, (100% / 6 * 1)),
   ),
-  'green':                #00c95c,
 ), $__colors);
 
 // English (US) naming, used in Bootstrap
@@ -127,18 +130,15 @@ $__colors: map-merge((
 ), $__colors);
 
 // Z-indexes
-$__z-indexes:             () !default;
-$__z-indexes: map-merge((
-  '1neg':                 -1,
-  '0':                    0,
-  '1':                    1,
-  '2':                    2,
-  '3':                    3,
-  '4':                    4,
-  '5':                    5,
-  '6':                    6,
-  '7':                    7,
-  '8':                    8,
-  '9':                    9,
-  '10':                   10,
-), $__z-indexes);
+$__z-index-from:          0 !default;
+$__z-index-to:            10 !default;
+$__z-indexes:             ();
+@for $i from $__z-index-from through $__z-index-to {
+  $__z-indexes: append($__z-indexes, $i);
+}
+
+// Cursors
+$__cursors: (alias, all-scroll, auto, cell, context-menu, col-resize, copy, crosshair, default,
+e-resize, ew-resize, grab, grabbing, help, move, n-resize, ne-resize, nesw-resize,
+ns-resize, nw-resize, nwse-resize, no-drop, none, not-allowed, pointer, progress,
+row-resize, s-resize, se-resize, sw-resize, text, url, w-resize, wait, zoom-in, zoom-out);

@@ -31,6 +31,14 @@ To make sure the functions are not being replaced, include this after all vendor
 
 Please note that the internal function `sb-map-get()` and mixin `sb-generator()` are left untouched.
 
+If you would like to use some, but not all functions without a prefix, you can always do this manually, this is how `functions-no-prefix` does it:
+
+```scss
+@function something($param1, $param2) {
+  @return sb-something($param1, $param2);
+}
+```
+
 ### What it does
 
 #### Generating CSS classes
@@ -47,6 +55,8 @@ Bootstrap 4 creates classes like 'mb-lg-5' for margin and 'font-italic' for font
 * `.line-height-{height}`
 * `.bw-{width}`, `.bwt-{width}`, `.bwb-{width}`, `.bwl-{width}`, `.bwr-{width}`: this is like Bootstrap's .m-2 and .ml-2, but for border-widths.
 * `.z-index-{index}`
+* `.nm-2`, `.nm-md-5` and so on: negative margin, just like the usual margin and padding classes.
+* `.t-2`, `.r-md-5` and so on: for positioning (top, right, bottom, left), just like the usual margin and padding classes.
 
 About the color variant classes: if you have a color that is a map, like the blue color here:
 
