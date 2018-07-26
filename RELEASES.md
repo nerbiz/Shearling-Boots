@@ -1,5 +1,15 @@
 # Release notes
 
+## 0.5.0
+
+* Added more CSS class generators, please see the readme for more info:
+  * Cursors.
+  * Negative margins.
+  * Positioning (top, right, bottom, left).
+* Simplified the z-index classes generating, using 'from' and 'to' values in a loop.
+* Added 'brand' (primary and secondary) colors, as a copy of 'theme' (but only primary and secondary).
+* Added info to the readme on how to selectively use non-prefixed functions.
+
 ## 0.4.1
 
 * Fixed: 'gray' values weren't set, because of non-existing function usage.
