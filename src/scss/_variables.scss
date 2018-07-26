@@ -105,6 +105,10 @@ $__colors: map-merge((
     'warning':            #f0ad4e,
     'danger':             #d9534f,
   ),
+  'brand': (
+    'primary':            $__color-brand-primary,
+    'secondary':          $__color-brand-secondary,
+  ),
   'background':           $__color-white,
   'font': (
     'base':               #42526b,
@@ -118,7 +122,6 @@ $__colors: map-merge((
     'dark':               lighten($__color-black, (100% / 6 * 2)),
     'darker':             lighten($__color-black, (100% / 6 * 1)),
   ),
-  'green':                #00c95c,
 ), $__colors);
 
 // English (US) naming, used in Bootstrap
