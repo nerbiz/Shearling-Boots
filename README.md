@@ -31,6 +31,14 @@ To make sure the functions are not being replaced, include this after all vendor
 
 Please note that the internal function `sb-map-get()` and mixin `sb-generator()` are left untouched.
 
+If you would like to use some, but not all functions without a prefix, you can always do this manually, this is how `functions-no-prefix` does it:
+
+```scss
+@function something($param1, $param2) {
+  @return sb-something($param1, $param2);
+}
+```
+
 ### What it does
 
 #### Generating CSS classes
