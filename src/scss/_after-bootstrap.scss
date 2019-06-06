@@ -1,5 +1,2 @@
-// 'Sync' the colors merged with Bootstrap, back into the custom variable
-$__colors: map-merge($__colors, $colors);
-
 @import 'generated';
 @import 'accessibility';
