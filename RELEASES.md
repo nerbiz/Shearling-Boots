@@ -1,5 +1,10 @@
 # Release notes
 
+## 0.5.1
+
+* Fixed: can't compile color maps as values, probably because of sass-loader update.
+* Added license info to the readme.
+
 ## 0.5.0
 
 * Added more CSS class generators, please see the readme for more info:
