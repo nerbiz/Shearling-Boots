@@ -61,7 +61,7 @@ Bootstrap 4 creates classes like 'mb-lg-5' for margin and 'font-italic' for font
 About the color variant classes: if you have a color that is a map, like the blue color here:
 
 ```scss
-$colors: (
+$__colors: (
     'red' => #F00,
     'blue': (
         'base'  => #00C,
